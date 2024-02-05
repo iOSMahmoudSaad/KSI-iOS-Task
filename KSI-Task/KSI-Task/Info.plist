@@ -12,12 +12,5 @@
 		<string>Montserrat-ExtraBold</string>
 		<string>Montserrat-Bold</string>
 	</array>
-	<key>UIApplicationSceneManifest</key>
-	<dict>
-		<key>UIApplicationSupportsMultipleScenes</key>
-		<false/>
-		<key>UISceneConfigurations</key>
-		<dict/>
-	</dict>
 </dict>
 </plist>
