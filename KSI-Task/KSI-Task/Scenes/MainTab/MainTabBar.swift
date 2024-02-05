@@ -105,9 +105,7 @@ class MainTabBar: UITabBarController {
             tabBarItem = .init(title: nil, image: UIImage(named: "profile"), selectedImage: UIImage(named: "profile"))
         }
         
-        //        tabBarItem.titlePositionAdjustment = .init(horizontal: 0, vertical: 15)
-      // tabBarItem.imageInsets = .init(top: 10, left: 0, bottom: -10, right: 0)
-        
+    
         return tabBarItem
         
     }

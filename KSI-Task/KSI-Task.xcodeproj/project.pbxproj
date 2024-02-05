@@ -30,6 +30,7 @@
 		66B58E382B71589B008E7682 /* TextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B58E372B71589B008E7682 /* TextField + Extension.swift */; };
 		66B58E3A2B715913008E7682 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B58E392B715913008E7682 /* Color + Extension.swift */; };
 		66B58E3C2B71596F008E7682 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B58E3B2B71596F008E7682 /* MainTabBar.swift */; };
+		66B58E3F2B715CFC008E7682 /* BaseWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B58E3E2B715CFC008E7682 /* BaseWireFrame.swift */; };
 		83C58E3F400F881174F89B81 /* Pods_KSI_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF11A32C3AD40059482A13EC /* Pods_KSI_Task.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		66B58E372B71589B008E7682 /* TextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField + Extension.swift"; sourceTree = "<group>"; };
 		66B58E392B715913008E7682 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
 		66B58E3B2B71596F008E7682 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		66B58E3E2B715CFC008E7682 /* BaseWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireFrame.swift; sourceTree = "<group>"; };
 		7CAE998F6FBE5EDD4E99A86A /* Pods-KSI-Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSI-Task.debug.xcconfig"; path = "Target Support Files/Pods-KSI-Task/Pods-KSI-Task.debug.xcconfig"; sourceTree = "<group>"; };
 		FF11A32C3AD40059482A13EC /* Pods_KSI_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KSI_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -192,6 +194,7 @@
 		66B58DF82B714BCE008E7682 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				66B58E3D2B715CF1008E7682 /* BaseWireFrame */,
 				66B58E292B71553E008E7682 /* Navigator */,
 				66B58E102B714EC6008E7682 /* Protocols */,
 				66B58E0F2B714E98008E7682 /* Coordinator */,
@@ -294,6 +297,14 @@
 				66B58E2D2B7155CD008E7682 /* MainNavigators.swift */,
 			);
 			path = Navigator;
+			sourceTree = "<group>";
+		};
+		66B58E3D2B715CF1008E7682 /* BaseWireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				66B58E3E2B715CFC008E7682 /* BaseWireFrame.swift */,
+			);
+			path = BaseWireFrame;
 			sourceTree = "<group>";
 		};
 		797E4638C4A77C6A1AA36303 /* Frameworks */ = {
@@ -428,6 +439,7 @@
 				66B58E342B7157A7008E7682 /* ViewController + Extension.swift in Sources */,
 				66B58E3A2B715913008E7682 /* Color + Extension.swift in Sources */,
 				66B58E3C2B71596F008E7682 /* MainTabBar.swift in Sources */,
+				66B58E3F2B715CFC008E7682 /* BaseWireFrame.swift in Sources */,
 				66B58E322B71578F008E7682 /* TableView + Extension.swift in Sources */,
 				66B58E262B7154BE008E7682 /* AppCoordinator.swift in Sources */,
 				66B58DDF2B714AF2008E7682 /* AppDelegate.swift in Sources */,
