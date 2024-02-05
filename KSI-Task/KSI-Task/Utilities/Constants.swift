@@ -11,7 +11,7 @@ import Foundation
  
 enum Constants:String {
     
-    case baseUrl        = "https://run.mocky.io/v3"
+    case baseUrl        = "https://dummyjson.com"
     case json           = "application/json"
     case firstTime      = "firstTime"
 }

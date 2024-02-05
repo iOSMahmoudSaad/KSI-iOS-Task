@@ -38,17 +38,21 @@ enum TabBarItems:Int,CaseIterable {
 }
 
 class MainTabBar: UITabBarController {
+    
     var coordinator:Coordinator
 
     init(coordinator:Coordinator) {
+        
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
+        
         fatalError("init(coder:) has not been implemented")
     }
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         setValue(CustomTabBar(), forKey: "tabBar")
         self.tabBar.tintColor = .lavenderPurple
@@ -57,6 +61,7 @@ class MainTabBar: UITabBarController {
     }
     
     private func setupTabBar(){
+        
         viewControllers = TabBarItems.allCases.map({
             let view =  createViewControllerFor($0)
             let navigation = UINavigationController(rootViewController: view)

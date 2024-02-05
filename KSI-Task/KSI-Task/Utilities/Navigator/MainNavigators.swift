@@ -13,6 +13,7 @@ class MainNavigator:Navigator {
     var coordinator: Coordinator
     
     enum Destination {
+        
         case home
         case menu
         case favourite
@@ -30,15 +31,16 @@ class MainNavigator:Navigator {
         
         switch destination {
         case .home:
-           print("Home")
+            let viewModel = HomeVCViewModel(getProductListUsecase: DefaultGetProductListUsecase(homeRepo: DefaultHomeRepo(productListLDBCLient: ProductListLDBCLient.shared)),productItemFavUsecase: DefaultProductItemFavUsecase(homeRepo: DefaultHomeRepo(productListLDBCLient: ProductListLDBCLient.shared)))
+            return HomeVC(viewModel: viewModel, coordinator: coordinator)
         case .menu:
-            print("menu")
+            return UIViewController()
         case .favourite:
-            print("favourite")
+            return UIViewController()
         case .cart:
-            print("cart")
+            return UIViewController()
         case .profile:
-            print("profile")
+            return UIViewController()
         default:
            return UIViewController()
         }
