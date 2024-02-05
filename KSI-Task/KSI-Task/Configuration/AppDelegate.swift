@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  KSI-Task
 //
-//  Created by Tea Computers1 on 05/02/2024.
+//  Created by Mahmoud Saad on 05/02/2024.
 //
 
 import UIKit
@@ -10,10 +10,13 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var appCoordinator:AppCoordinator!
+    var window:UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow()
+        appCoordinator = .init(window: window!)
+        appCoordinator.start()
         return true
     }
 
