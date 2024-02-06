@@ -41,19 +41,26 @@ class HomeVCViewModel:ViewModel,HomeVCViewModelInput,HomeVCViewModelOutput {
         
         self.getProductListUsecase = getProductListUsecase
         self.productItemFavUsecase = productItemFavUsecase
-        searchText.subscribe { [weak self] search in
-            guard let self,let search = search.element else{return}
-            let arr = self.productItems.value
-            if search.count > 3 {
+        searchText
+            .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] search in
+                guard let self = self else { return }
+                let allProducts = self.productItems.value
                 
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-                    self.productItems.accept(arr.filter({$0.name.contains(search)}))
+                if search.isEmpty {
+                    
+                     
+                    self.productItems.accept(allProducts)
+                    self.productCount.accept("\(allProducts.count) products found")
+                } else {
+                  
+                    let filteredProducts = allProducts.filter { $0.name.localizedCaseInsensitiveContains(search) }
+                    self.productItems.accept(filteredProducts)
+                    self.productCount.accept("\(filteredProducts.count) products found")
                 }
-            } else {
-                
-                self.productItems.accept(arr)
-            }
-        }.disposed(by: disposeBag)
+            })
+            .disposed(by: disposeBag)
     }
     func viewDidLoad() {
         
