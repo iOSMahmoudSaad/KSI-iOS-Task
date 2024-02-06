@@ -19,6 +19,7 @@ class MainNavigator:Navigator {
         case favourite
         case cart
         case profile
+        case productDetails(id:String)
         
     }
     
@@ -39,6 +40,9 @@ class MainNavigator:Navigator {
             return UIViewController()
         case .cart:
             return UIViewController()
+        case .productDetails(let id):
+            let viewModel = ProductDetailsVCVieModel(id: id,repo: DefaultProductDetailsRepo(productListLDBCLient: ProductListLDBCLient.shared))
+            return ProductDetailsVC(viewModel: viewModel, coordinator: coordinator)
         case .profile:
             return UIViewController()
         default:
