@@ -31,22 +31,31 @@ class MainNavigator:Navigator {
     func viewController(for destination: Destination) -> UIViewController {
         
         switch destination {
+            
         case .home:
             let viewModel = HomeVCViewModel(getProductListUsecase: DefaultGetProductListUsecase(homeRepo: DefaultHomeRepo(productListLDBCLient: ProductListLDBCLient.shared)),productItemFavUsecase: DefaultProductItemFavUsecase(homeRepo: DefaultHomeRepo(productListLDBCLient: ProductListLDBCLient.shared)))
             return HomeVC(viewModel: viewModel, coordinator: coordinator)
+            
         case .menu:
-            return UIViewController()
+            let viewModel = MenuVCViewModel()
+            return MenuVC(viewModel: viewModel, coordinator: coordinator)
+            
         case .favourite:
-            return UIViewController()
+            let viewModel = FavouriteVCViewModel()
+            return FavouriteVC(viewModel: viewModel, coordinator: coordinator)
+            
         case .cart:
-            return UIViewController()
+            let viewModel = ShoppingCartViewModel()
+            return ShoppingCartVC(viewModel: viewModel, coordinator: coordinator)
+            
         case .productDetails(let id):
             let viewModel = ProductDetailsVCVieModel(id: id,repo: DefaultProductDetailsRepo(productListLDBCLient: ProductListLDBCLient.shared))
             return ProductDetailsVC(viewModel: viewModel, coordinator: coordinator)
+            
         case .profile:
-            return UIViewController()
-        default:
-           return UIViewController()
+            let viewModel = ProfileVCViewModel()
+            return ProfileVC(viewModel: viewModel, coordinator: coordinator)
+       
         }
     }
 }
