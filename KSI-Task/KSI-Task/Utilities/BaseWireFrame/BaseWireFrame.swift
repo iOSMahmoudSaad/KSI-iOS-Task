@@ -41,7 +41,7 @@ class BaseWireFrame<T:ViewModel>:UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        view.backgroundColor = .systemGray4
+        view.backgroundColor = .Gray2
         bind(viewModel: viewModel)
     }
     //MARK: - Helper functions

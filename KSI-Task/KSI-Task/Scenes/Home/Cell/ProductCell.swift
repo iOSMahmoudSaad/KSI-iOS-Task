@@ -29,9 +29,11 @@ class ProductCell: UICollectionViewCell,ProductCellViewModel {
     override func awakeFromNib() {
         
         super.awakeFromNib()
+        contentView.backgroundColor = .white
         contentView.borderColor = .Gray6
         contentView.borderWidth = 2
         contentView.cornerRadius = 15
+        productImageView.cornerRadius = 15
         faveBtn.tintColor = .black
         
         faveBtn.rx.tap.subscribe {[weak self] _ in

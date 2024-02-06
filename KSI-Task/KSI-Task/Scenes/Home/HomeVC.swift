@@ -33,11 +33,11 @@ class HomeVC: BaseWireFrame<HomeVCViewModel> {
     private func setupUI(){
         searchTextField.setPlaceHolderColor(.DarkGray,Fonts.regular(name: FontName.Montserrat.rawValue, size: FontSize.fontMedium))
         searchView.layer.cornerRadius = 10
-        productColl.backgroundColor = .white
         productColl.registerCell(cellClass: ProductCell.self)
         productColl.setCollectionViewLayout(UICollectionViewCompositionalLayout(section: productSectionLayout()), animated: true)
     }
     fileprivate func productSectionLayout()->NSCollectionLayoutSection{
+        
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1))
          let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 8)
