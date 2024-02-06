@@ -2,12 +2,12 @@
 //  HomeVC.swift
 //  KSI-Task
 //
-//  Created by Tea Computers1 on 05/02/2024.
+//  Created by Mahmoud Saad on 05/02/2024.
 //
 
-import UIKit
-
- 
+ import UIKit
+ import RxSwift
+ import RxCocoa
 
 class HomeVC: BaseWireFrame<HomeVCViewModel> {
     
@@ -19,6 +19,8 @@ class HomeVC: BaseWireFrame<HomeVCViewModel> {
     @IBOutlet weak var productCountLbl: UILabel!
     
     @IBOutlet weak var productColl: UICollectionView!
+    
+    internal let disposeBag1 = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +45,6 @@ class HomeVC: BaseWireFrame<HomeVCViewModel> {
         item.contentInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 8)
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(215))
          let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item,item])
-       // group.interItemSpacing = .fixed(8)
          let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 10
          return section
@@ -66,19 +67,28 @@ class HomeVC: BaseWireFrame<HomeVCViewModel> {
                 self.createAlert(erroMessage: msg)
             }
         }.disposed(by: disposeBag)
-      
+        
+        viewModel.navigateToDetails.subscribe {[weak self] id in
+            
+            guard let self ,let id = id.element else{return}
+            self.coordinator.main.navigate(to: .productDetails(id: id))
+        }.disposed(by: disposeBag)
+        
         viewModel.productCount.subscribe {[weak self] count in
             guard let self ,let count = count.element else{return}
             self.productCountLbl.text = count
         }.disposed(by: disposeBag)
     }
-    func bindSearchText(){
+    func bindSearchText() {
         searchTextField.rx.text
                    .orEmpty
                    .bind(to: viewModel.searchText)
                    .disposed(by: disposeBag)
+       
     }
+    
     func bindCollectionView(){
+        
         viewModel.productItems.asObservable().bind(to: productColl.rx.items(cellIdentifier: ProductCell.getIdentifier(),cellType: ProductCell.self)){[weak self] index,model,cell in
             guard let self else{return}
             cell.configurationCeLl(name: model.name, description: model.description, price: self.viewModel.getForrmstedNumWithCurrency(num: model.price), imageUrl: model.thumbnail, isFav: model.isFav)
