@@ -53,6 +53,27 @@ class ProductListLDBCLient {
             completion(nil,error.localizedDescription)
         }
     }
+    
+    func getProductDetails(id:String,_ completion:@escaping (_ sucess:ProductDetails?,_ failure:String?)->Void) {
+        
+        guard let result =  realm?.objects(ProductListLDB.self) else {
+            
+            completion(nil,"Can not fetch data")
+            return
+        }
+        guard let products = result.first?.products else {
+            
+            completion(nil,"No Product List")
+            return
+        }
+        guard let details = products.filter({$0._id.stringValue == id}).first else {
+            
+            completion(nil,"No Details")
+            return
+        }
+        let productDetails = ProductDetails(id: details._id.stringValue, title:  details.title, description:  details.descriptions, price:  details.price, discountPercentage:  details.discountPercentage, rating:  details.rating, stock:  details.stock, brand:  details.brand, category:  details.category, thumbnail:  details.thumbnail, images:Array(details.images))
+        completion(productDetails,nil)
+    }
 
     
     func toggleFavorite(id:String,_ completion:@escaping (_ sucess:ProductList?,_ failure:String?)->Void) {

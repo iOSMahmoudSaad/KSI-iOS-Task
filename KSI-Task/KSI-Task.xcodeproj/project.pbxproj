@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66707CBB2B7264E800116DD8 /* ProductDetailsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66707CBA2B7264E800116DD8 /* ProductDetailsRepo.swift */; };
+		66707CBD2B72651300116DD8 /* ProductDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66707CBC2B72651300116DD8 /* ProductDetailsModel.swift */; };
+		66707CBF2B72659000116DD8 /* DefaultProductDetailsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66707CBE2B72659000116DD8 /* DefaultProductDetailsRepo.swift */; };
+		66707CC12B72661200116DD8 /* ProductDetailsVCVieMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66707CC02B72661200116DD8 /* ProductDetailsVCVieMode.swift */; };
+		66707CC82B7266E600116DD8 /* ProductImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66707CC62B7266E600116DD8 /* ProductImageCell.swift */; };
+		66707CC92B7266E600116DD8 /* ProductImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66707CC72B7266E600116DD8 /* ProductImageCell.xib */; };
+		66707CD02B7284FF00116DD8 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66707CCE2B7284FF00116DD8 /* ProductDetailsVC.swift */; };
+		66707CD12B7284FF00116DD8 /* ProductDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66707CCF2B7284FF00116DD8 /* ProductDetailsVC.xib */; };
 		66B58DDF2B714AF2008E7682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B58DDE2B714AF2008E7682 /* AppDelegate.swift */; };
 		66B58DE82B714AF3008E7682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66B58DE72B714AF3008E7682 /* Assets.xcassets */; };
 		66B58DEB2B714AF3008E7682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B58DE92B714AF3008E7682 /* LaunchScreen.storyboard */; };
@@ -54,6 +62,14 @@
 
 /* Begin PBXFileReference section */
 		03537956E39F53EDC52BE0B4 /* Pods-KSI-Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSI-Task.release.xcconfig"; path = "Target Support Files/Pods-KSI-Task/Pods-KSI-Task.release.xcconfig"; sourceTree = "<group>"; };
+		66707CBA2B7264E800116DD8 /* ProductDetailsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsRepo.swift; sourceTree = "<group>"; };
+		66707CBC2B72651300116DD8 /* ProductDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsModel.swift; sourceTree = "<group>"; };
+		66707CBE2B72659000116DD8 /* DefaultProductDetailsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProductDetailsRepo.swift; sourceTree = "<group>"; };
+		66707CC02B72661200116DD8 /* ProductDetailsVCVieMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVCVieMode.swift; sourceTree = "<group>"; };
+		66707CC62B7266E600116DD8 /* ProductImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageCell.swift; sourceTree = "<group>"; };
+		66707CC72B7266E600116DD8 /* ProductImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductImageCell.xib; sourceTree = "<group>"; };
+		66707CCE2B7284FF00116DD8 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
+		66707CCF2B7284FF00116DD8 /* ProductDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsVC.xib; sourceTree = "<group>"; };
 		66B58DDB2B714AF2008E7682 /* KSI-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KSI-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B58DDE2B714AF2008E7682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66B58DE72B714AF3008E7682 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,12 +82,10 @@
 		66B58DFE2B714D3A008E7682 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		66B58DFF2B714D3A008E7682 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		66B58E002B714D3A008E7682 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
-		66B58E1B2B715269008E7682 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		66B58E1D2B71527A008E7682 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		66B58E1F2B715288008E7682 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		66B58E202B715295008E7682 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		66B58E212B71529F008E7682 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		66B58E222B7152A7008E7682 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		66B58E232B71545C008E7682 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		66B58E252B7154BE008E7682 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		66B58E272B715510008E7682 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -127,6 +141,15 @@
 				03537956E39F53EDC52BE0B4 /* Pods-KSI-Task.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		66707CB52B72642A00116DD8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				66707CC62B7266E600116DD8 /* ProductImageCell.swift */,
+				66707CC72B7266E600116DD8 /* ProductImageCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		66B58DD22B714AF2008E7682 = {
@@ -189,7 +212,6 @@
 				66B58E0A2B714DEB008E7682 /* ShoppingCart */,
 				66B58E092B714DDF008E7682 /* Favourite */,
 				66B58E082B714DD3008E7682 /* ProductDetails */,
-				66B58E1B2B715269008E7682 /* README.md */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -257,7 +279,10 @@
 		66B58E082B714DD3008E7682 /* ProductDetails */ = {
 			isa = PBXGroup;
 			children = (
-				66B58E222B7152A7008E7682 /* README.md */,
+				66707CB52B72642A00116DD8 /* Cell */,
+				66707CC02B72661200116DD8 /* ProductDetailsVCVieMode.swift */,
+				66707CCE2B7284FF00116DD8 /* ProductDetailsVC.swift */,
+				66707CCF2B7284FF00116DD8 /* ProductDetailsVC.xib */,
 			);
 			path = ProductDetails;
 			sourceTree = "<group>";
@@ -359,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				66B58E522B7161C7008E7682 /* ProductModel.swift */,
+				66707CBC2B72651300116DD8 /* ProductDetailsModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -376,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				66B58E5C2B71638F008E7682 /* HomeRepo.swift */,
+				66707CBA2B7264E800116DD8 /* ProductDetailsRepo.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -420,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				66B58E6C2B716826008E7682 /* DefaultHomeRepo.swift */,
+				66707CBE2B72659000116DD8 /* DefaultProductDetailsRepo.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -535,7 +563,9 @@
 				66B58E812B717C8A008E7682 /* HomeVC.xib in Resources */,
 				66B58E022B714D3A008E7682 /* Montserrat-Medium.ttf in Resources */,
 				66B58E072B714D3A008E7682 /* Montserrat-SemiBold.ttf in Resources */,
+				66707CD12B7284FF00116DD8 /* ProductDetailsVC.xib in Resources */,
 				66B58E442B715EA3008E7682 /* ProductCell.xib in Resources */,
+				66707CC92B7266E600116DD8 /* ProductImageCell.xib in Resources */,
 				66B58E052B714D3A008E7682 /* Montserrat-ExtraBold.ttf in Resources */,
 				66B58DE82B714AF3008E7682 /* Assets.xcassets in Resources */,
 			);
@@ -593,9 +623,13 @@
 				66B58E592B7162CB008E7682 /* GetProductListUseCase.swift in Sources */,
 				66B58E502B7160D7008E7682 /* HomeViewModel.swift in Sources */,
 				66B58E342B7157A7008E7682 /* ViewController + Extension.swift in Sources */,
+				66707CC82B7266E600116DD8 /* ProductImageCell.swift in Sources */,
+				66707CBB2B7264E800116DD8 /* ProductDetailsRepo.swift in Sources */,
 				66B58E652B7165D3008E7682 /* ProductListLDB.swift in Sources */,
+				66707CC12B72661200116DD8 /* ProductDetailsVCVieMode.swift in Sources */,
 				66B58E732B716966008E7682 /* HomeRouter.swift in Sources */,
 				66B58E3A2B715913008E7682 /* Color + Extension.swift in Sources */,
+				66707CD02B7284FF00116DD8 /* ProductDetailsVC.swift in Sources */,
 				66B58E3C2B71596F008E7682 /* MainTabBar.swift in Sources */,
 				66B58E672B71661F008E7682 /* ProductLDB.swift in Sources */,
 				66B58E792B7169A7008E7682 /* TargetProtocol.swift in Sources */,
@@ -607,6 +641,7 @@
 				66B58E262B7154BE008E7682 /* AppCoordinator.swift in Sources */,
 				66B58E802B717C8A008E7682 /* HomeVC.swift in Sources */,
 				66B58E632B71658D008E7682 /* ProductListLDBCLient.swift in Sources */,
+				66707CBD2B72651300116DD8 /* ProductDetailsModel.swift in Sources */,
 				66B58DDF2B714AF2008E7682 /* AppDelegate.swift in Sources */,
 				66B58E5B2B71631D008E7682 /* FavouriteProductItemUseCase.swift in Sources */,
 				66B58E282B715510008E7682 /* Coordinator.swift in Sources */,
@@ -615,6 +650,7 @@
 				66B58E242B71545C008E7682 /* Constants.swift in Sources */,
 				66B58E772B716998008E7682 /* RequestClient.swift in Sources */,
 				66B58E5D2B71638F008E7682 /* HomeRepo.swift in Sources */,
+				66707CBF2B72659000116DD8 /* DefaultProductDetailsRepo.swift in Sources */,
 				66B58E2C2B71557C008E7682 /* Navigator.swift in Sources */,
 				66B58E432B715EA3008E7682 /* ProductCell.swift in Sources */,
 				66B58E362B715855008E7682 /* View + Extension .swift in Sources */,
